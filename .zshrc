@@ -8,6 +8,7 @@ JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_11.jdk/Contents/Home/jre
 export PATH=~/.bin:/usr/local/bin:/usr/local/share/python:/usr/local/heroku/bin:/Users/james/Developer/Android/sdk/tools:/Users/james/Developer/Android/sdk/platform-tools:/Library/PostgreSQL/9.2/bin:/opt/local/bin:/opt/local/sbin:/Applications/xampp/xamppfiles/bin:$PATH
 # Aliases
 alias tmux='tmux -2' #get dat color
+alias vvimrc='vim ~/.vimrc'
 alias sshschool='ssh ym3798@algebra.sci.csueastbay.edu'
 alias sshfsschool='sshfs ym3798@algebra.sci.csueastbay.edu:/home/students/13wi/ym3798 ~/SSHFS'
 
