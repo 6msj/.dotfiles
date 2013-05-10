@@ -26,6 +26,7 @@ alias vi='vim -u NONE'
 alias vvimrc='vim ~/.vimrc'
 alias sshschool='ssh ym3798@algebra.sci.csueastbay.edu'
 alias sshfsschool='sshfs ym3798@algebra.sci.csueastbay.edu:/home/students/13wi/ym3798 ~/SSHFS'
+alias gmacs='/usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs'
 
 # Status Line
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
