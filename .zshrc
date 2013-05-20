@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="random"
-plugins=(git, osx)
+plugins=(git osx brew)
 source $ZSH/oh-my-zsh.sh
 COPYFILE_DISABLE=true # don't create additional files during tar
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_11.jdk/Contents/Home/jre
