@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="random"
 ZSH_THEME="af-magic"
-plugins=(git osx brew rsync)
+plugins=(git osx brew rsync autojump)
 source $ZSH/oh-my-zsh.sh
 COPYFILE_DISABLE=true # don't create additional files during tar
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_11.jdk/Contents/Home/jre
@@ -28,7 +28,7 @@ NODE_PATH='$DOCTORJS:${NODE_PATH}'
 # Aliases
 alias tmux='tmux -2' #get dat color
 alias vi='vim -u NONE'
-alias vvimrc='vim ~/.vimrc'
+alias vvimrc='vim ~/.vim/.vimrc'
 alias sshschool='ssh ym3798@algebra.sci.csueastbay.edu'
 alias sshfsschool='sshfs ym3798@algebra.sci.csueastbay.edu:/home/students/13wi/ym3798 ~/SSHFS'
 alias gmacs='/usr/local/Cellar/emacs-mac/emacs-24.3-mac-4.2/Emacs.app/Contents/MacOS/Emacs'
