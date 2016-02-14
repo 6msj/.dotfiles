@@ -22,16 +22,17 @@ USER_BIN=$HOME/.bin
 LOCAL_BIN=/usr/local/bin
 SBIN_BIN=/usr/local/sbin
 HEROKU=/usr/local/heroku/bin
-ANDROID_TOOLS=$HOME/Library/Developer/Xamarin/android-sdk-mac_x86/tools
-ANDROID_PLATFORM_TOOLS=$HOME/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools
+ANDROID_TOOLS=$ANDROID_HOME/tools
+ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
 POSTGRES=/Library/PostgreSQL/9.2/bin
 OPT_BIN=/opt/local/bin
 OPT_SBIN=/opt/local/sbin
 XAMP=/Applications/xampp/xamppfiles/bin
 CABAL=$HOME/.cabal/bin
+REDIS=/usr/local/redis-2.8.7/bin
 
+export OMNISHARP=$HOME/Developer/omnisharp-server/OmniSharp/bin/Debug/
 export GOBIN=/usr/local/go/bin
-export GOPATH=$HOME/Developer/kandi/servers
 
 ##############
 # BEGIN: WORK RELATED
@@ -43,18 +44,29 @@ export EM_REPO=${EMPROJECTROOT}/EveryoneMessages
 export EM_REDIS_HOME=${EMPROJECTROOT}/redis
 export EM_REDIS_DATA=${EMPROJECTROOT}/redis/data
 
-export GRAILS_HOME=/usr/local/grails
+# GRADLE
+export GRADLE_221=/usr/local/gradle-2.2.1
+export GRADLE_HOME=${GRADLE_221}
+
+# GRAILS
+export GRAILS_211=/usr/local/grails-2.1.1
+export GRAILS_221=/usr/local/grails-2.2.1
+export GRAILS_HOME=${GRAILS_221}
 
 CASSANDRA=/usr/local/Cassandra/apache-cassandra-2.0.7/bin
 ERLANG=${EMPROJECTROOT}/erlang/bin
 
 export JAVA_OPTS="-Xms1g -Xmx2g -XX:MaxPermSize=2g"
 export WHPROJECTROOT=$HOME/Developer/whoshere
+
+export MONOTOUCH_BIN=/Developer/MonoTouch/usr/bin
+export MONODROID_BIN=/Developer/MonoAndroid/usr/bin
+
 ##############
 # END: WORK RELATED
 ##############
 
-export PATH=$USER_BIN:$LOCAL_BIN:$GRAILS_HOME/bin:$ERLANG:$CABAL:$SBIN_BIN:$HEROKU:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$POSTGRES:$OPT_BIN:$OPT_SBIN:$XAMP:$CASSANDRA:$PATH
+export PATH=$USER_BIN:$LOCAL_BIN:$GRAILS_HOME/bin:$GRADLE_HOME:$ERLANG:$CABAL:$SBIN_BIN:$HEROKU:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$MONOTOUCH_BIN:$MONODROID_BIN:$POSTGRES:$OPT_BIN:$OPT_SBIN:$XAMP:$CASSANDRA:$REDIS:$PATH
 
 DOCTORJS=/usr/local/lib/jsctags
 NODE_PATH='$DOCTORJS:${NODE_PATH}'
@@ -64,18 +76,19 @@ NODE_PATH='$DOCTORJS:${NODE_PATH}'
 alias tm='tmux -2 attach || tmux -2 new'
 # vim with no plugins
 alias vi='vim -u NONE'
-alias vvimrc='vim ~/.vim/.vimrc'
 alias jformat='python -m json.tool'
-alias seedbox='ssh jojojames@walnut.whatbox.ca'
+alias seedbox='ssh jojojames@vanilla.whatbox.ca'
+alias syno='ssh -p 4000 james@jojobebe.noip.me'
 
 # Status Line
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-
-# source ruby/rvm/rails
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # disable automatica renaming
 export DISABLE_AUTO_TITLE="true"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# source ruby/rvm/rails
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
