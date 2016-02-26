@@ -49,8 +49,12 @@ export GRADLE_221=/usr/local/gradle-2.2.1
 export GRADLE_HOME=${GRADLE_221}
 
 # GRAILS
+# EM
 export GRAILS_211=/usr/local/grails-2.1.1
+
+# WHOSHERE
 export GRAILS_221=/usr/local/grails-2.2.1
+
 export GRAILS_HOME=${GRAILS_221}
 
 CASSANDRA=/usr/local/Cassandra/apache-cassandra-2.0.7/bin
