@@ -55,7 +55,7 @@ export GRAILS_211=/usr/local/grails-2.1.1
 # WHOSHERE
 export GRAILS_221=/usr/local/grails-2.2.1
 
-export GRAILS_HOME=${GRAILS_221}
+export GRAILS_HOME=${GRAILS_211}
 
 CASSANDRA=/usr/local/Cassandra/apache-cassandra-2.0.7/bin
 ERLANG=${EMPROJECTROOT}/erlang/bin
