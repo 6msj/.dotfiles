@@ -24,12 +24,15 @@ fi
 # Copy directories instead of linking them.
 # This is because the directories are git repositories anyway.
 # When updating one location, updating the other will just be a pull.
-echo "copying .emacs.d to $HOME/.emacs.d"
-cp -r .emacs.d $HOME/.emacs.d
-echo "copying .zsh to $HOME/.zsh"
-cp -r .zsh $HOME/.zsh
-echo "copying .vim to $HOME/.vim"
-cp -r .vim $HOME/.vim
+echo "copying $HOME/.dotfiles/.emacs.d to $HOME/.emacs.d"
+cp -r $HOME/.dotfiles/.emacs.d $HOME/.emacs.d
+echo "copying $HOME/.dotfiles/.zsh to $HOME/.zsh"
+cp -r $HOME/.dotfiles/.zsh $HOME/.zsh
+echo "copying $HOME/.dotfiles/.vim to $HOME/.vim"
+cp -r $HOME/.dotfiles/.vim $HOME/.vim
+
+echo "linking .tmux.conf to $HOME/.tmux.conf"
+ln -s $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 
 echo "calling setup for zsh"
 $HOME/.zsh/setup.sh
