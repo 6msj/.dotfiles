@@ -1,3 +1,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/jojojames/.emacs.d
+[submodule ".zsh"]
+	path = .zsh
+	url = https://github.com/jojojames/.zsh
