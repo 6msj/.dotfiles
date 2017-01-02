@@ -4,3 +4,6 @@
 [submodule ".zsh"]
 	path = .zsh
 	url = https://github.com/jojojames/.zsh
+[submodule ".vim"]
+	path = .vim
+	url = https://github.com/jojojames/.vim
